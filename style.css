@@ -58,21 +58,51 @@ select{
     font-style: bold;
     letter-spacing: 3px;
     }
-.sub{
-    border: none ;
-    font-family: 'Irish Grover';
-    color: beige;
-    width: 173px;
-    height: 62px;
-    background: #04724D;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2),0px 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 16px;
-}
+.sub {
+        border: none;
+        font-family: 'Irish Grover';
+        color: beige;
+        width: 173px;
+        height: 62px;
+        background: #04724D;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 16px;
+        transition: all 0.3s ease; 
+ }
+    
+.sub:hover {
+        background: #056c47; 
+        color: #e0d5c4; 
+        transform: scale(1.05);
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3), 0px 4px 6px rgba(0, 0, 0, 0.15); 
+ }
+    
+
 input[type="date"]::-webkit-calendar-picker-indicator {
-    width: 60px;
-    height: 50px;
-    background-image: url(images/1000_F_506683365_698ISECDIZBYFvw3DVNb7KbZbyC5Yv34-removebg-preview\ 1.png)
+    width: 50px;
+    height: 43px;
+    background-image: url(images/1000_F_506683365_698ISECDIZBYFvw3DVNb7KbZbyC5Yv34-removebg-preview\ 1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
 }
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    width: 40px;
+    height: 40px;
+    background-image: url(images/time.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+input[type="date"]:hover::-webkit-calendar-picker-indicator,
+input[type="time"]:hover::-webkit-calendar-picker-indicator {
+    transform: scale(1.1); /* Slightly enlarges the icon on hover */
+}
+
 #tasktable {
     width: 80%;
     margin: 50px auto;
@@ -109,6 +139,36 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 #tasktable tbody tr:nth-child(even) {
     background-color: #8DB38B;
 }
+.editbtn {
+    background-color: #4CAF50;
+    color: white; 
+    border: none; 
+    border-radius: 5px;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+.deletbtn {
+    background-color: #4CAF50;
+    color: white; 
+    border: none; 
+    border-radius: 5px;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+.macbtn {
+    background-color: #4CAF50;
+    color: white; 
+    border: none; 
+    border-radius: 5px;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
 
 #tasktable tbody tr:nth-child(odd) {
     background-color: #4A4A48;
@@ -139,3 +199,5 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background: none;
     border: none;
 }
+
+

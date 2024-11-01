@@ -19,6 +19,7 @@ function addtask() {
     tasks.push(task);
     displayTasks();
     document.getElementById("form").reset();
+    
 }
 
 function displayTasks() {
@@ -28,7 +29,7 @@ function displayTasks() {
 
     tasks.forEach(task => {
         row = document.createElement("tr");
-
+        
         namecell = document.createElement("td");
         namecell.textContent = task.taskname;
         row.appendChild(namecell);
@@ -54,6 +55,7 @@ function displayTasks() {
         editcell = document.createElement("td");
         edit = document.createElement("button");
         edit.innerHTML = "edit me";
+        edit.classList.add("editbtn");
         edit.setAttribute("onclick", `editTask(${task.id})`);
         editcell.appendChild(edit);
         row.appendChild(editcell);
@@ -61,6 +63,7 @@ function displayTasks() {
         deletcell = document.createElement("td");
         delet = document.createElement("button");
         delet.innerHTML = "delete me";
+        delet.classList.add("deletbtn");
         delet.setAttribute("onclick", `DeletTask(${task.id})`);
         deletcell.appendChild(delet);
         row.appendChild(deletcell);
@@ -68,11 +71,13 @@ function displayTasks() {
         maccell = document.createElement("td");
         mac = document.createElement("button");
         mac.innerHTML = "mark as done";
+        mac.classList.add("macbtn");
         mac.setAttribute("onclick", `macTask(${task.id})`);
         maccell.appendChild(mac);
         row.appendChild(maccell);
 
         tablebody.appendChild(row);
+
     });
 }
 
@@ -93,16 +98,16 @@ function editTask(id) {
     addbt.innerHTML = "edit";
     addbt.setAttribute("onclick", `addModif(${id})`);
 
-   
+
 }
  function addModif(id) {
     for (let i = 0; i < tasks.length; i++) {
         if (tasks[i].id == id) {
-        tasks[id].taskname = document.getElementById("task_name").value;
-        tasks[id].description = document.getElementById("description").value;
-        tasks[id].status = document.getElementById("statu").value;
-        tasks[id].time = document.getElementById("time").value;
-        tasks[id].date = document.getElementById("date").value;
+        tasks[i].taskname = document.getElementById("task_name").value;
+        tasks[i].description = document.getElementById("description").value;
+        tasks[i].status = document.getElementById("statu").value;
+        tasks[i].time = document.getElementById("time").value;
+        tasks[i].date = document.getElementById("date").value;
         }
     }
         displayTasks();
@@ -121,6 +126,7 @@ function DeletTask(id) {
         }
 }
     displayTasks();
+
 }
 
 function macTask(id){
@@ -130,4 +136,18 @@ function macTask(id){
 }
 }
     displayTasks();
+}
+
+
+function late(){
+    const d = new Date();
+    let dl = new Date(tasks[i].Date);
+    delay = (dl - d )/(1000*60*60*24) ;
+
+    for (let i = 0; i < tasks.length; i++) {
+        let dl = new Date(tasks[i].Date);
+
+        if (delay >= 0) {
+            task[i].classList.add("mystyle");
+        }}
 }
