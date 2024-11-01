@@ -1,0 +1,141 @@
+body{
+    margin: 0;
+    background-color: #8DB38B;
+    font-family: 'Irish Grover';
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #56876D;
+    height: 130px ;
+}
+.hidcnt{
+    margin-left: 40px;
+    font-size: 24px;
+    
+}
+header img{
+    padding: 10px;
+    width: 104px;
+    height: 107px;
+}
+#form{
+    height: 200px;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+input{
+    height: 70px;
+    width: 230px;
+    border: none;
+    text-align: center;
+    background-color: #4A4A48;
+    font-family: 'Irish Grover';
+    color: #ffffff;
+    font-style: bold;
+}
+#task_name{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+#date{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+select{
+    height: 70px;
+    width: 200px;
+    border: none;
+    text-align: center;
+    background-color: #4A4A48;
+    font-family: 'Irish Grover';
+    color: #ffffff;
+    font-style: bold;
+    letter-spacing: 3px;
+    }
+.sub{
+    border: none ;
+    font-family: 'Irish Grover';
+    color: beige;
+    width: 173px;
+    height: 62px;
+    background: #04724D;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2),0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    width: 60px;
+    height: 50px;
+    background-image: url(images/1000_F_506683365_698ISECDIZBYFvw3DVNb7KbZbyC5Yv34-removebg-preview\ 1.png)
+}
+#tasktable {
+    width: 80%;
+    margin: 50px auto;
+    border-collapse: collapse;
+    font-family: 'Irish Grover';
+    background-color: #4A4A48;
+    color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#tasktable thead tr {
+    background-color: #56876D;
+    height: 60px;
+    text-align: center;
+    font-size: 24px;
+}
+
+#tasktable thead th {
+    padding: 10px;
+    color: #ffffff;
+}
+
+#tasktable tbody tr {
+    text-align: center;
+    font-size: 18px;
+}
+
+#tasktable tbody td {
+    padding: 15px;
+}
+
+#tasktable tbody tr:nth-child(even) {
+    background-color: #8DB38B;
+}
+
+#tasktable tbody tr:nth-child(odd) {
+    background-color: #4A4A48;
+}
+
+#tasktable tbody tr td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#tasktable tbody tr td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.mac{
+    color: beige;
+    width: 30px;
+    height: 40px;
+    background: #04724D;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2),0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+.edit{
+   background: none;
+   border: none;
+}
+.delete{
+    background: none;
+    border: none;
+}

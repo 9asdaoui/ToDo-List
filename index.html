@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Irish Grover' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+       <div class="hidcnt"> <h1>To Do List</h1>
+        <p>Organize your tasks effortlessly.</p></div>
+        <img src="images/list-logo-character-vector-illustration-art-paper_567062-291_1-removebg-preview.png" alt="">
+    </header>
+
+    <main>
+        <form id="form">
+            <input required  placeholder="task name"  id="task_name"><!--
+            --><input required  placeholder="description "  id="description"><!--
+            --><select id="statu" >
+                <option >status</option>
+                <option >to do</option>
+                <option >doing</option>
+                <option >done</option>
+              </select><!--  
+              --><input type="time" id="time" value="12:10"><!-- 
+            --><input type="date" id="date" value="2024-10-30" min="2010-01-01" max="2030-12-31" >
+            <button type="button" onclick="addtask()" class="sub" id="sub">add task</button> 
+        </form>
+
+        <table id="tasktable">
+            <thead>
+              <tr>
+                
+                <th>Task Name</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Time</th>
+                <th>Date</th>
+                <th>Edit</th>
+                <th>Delete</th>
+                <th>mark as c</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+        
+            </tr>
+            </tbody>
+          </table>
+          
+          
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
