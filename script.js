@@ -1,4 +1,3 @@
-
 let tasks = [];
 let task = {};
 let counter = 0;
@@ -6,7 +5,6 @@ let counter = 0;
 
 function addtask() {
 
-    console.log(tasks);
 
     task = {
         id: counter++,
@@ -19,6 +17,7 @@ function addtask() {
     tasks.push(task);
     displayTasks();
     document.getElementById("form").reset();
+    // late();
     
 }
 
@@ -29,6 +28,8 @@ function displayTasks() {
 
     tasks.forEach(task => {
         row = document.createElement("tr");
+        row.setAttribute("id", `myStyle`);
+
         
         namecell = document.createElement("td");
         namecell.textContent = task.taskname;
@@ -79,6 +80,7 @@ function displayTasks() {
         tablebody.appendChild(row);
 
     });
+    // late()
 }
 
 
@@ -110,7 +112,7 @@ function editTask(id) {
         tasks[i].date = document.getElementById("date").value;
         }
     }
-        displayTasks();
+         displayTasks();
         let addbt = document.getElementById("sub")
         addbt.innerHTML = "add task";
         addbt.setAttribute("onclick", `addtask(${id})`);
@@ -129,25 +131,33 @@ function DeletTask(id) {
 
 }
 
-function macTask(id){
+function macTask(id) {
     for (let i = 0; i < tasks.length; i++) {
         if (tasks[i].id == id) {
-    tasks[i].status.innerHTML = "done";
-}
-}
+            tasks[i].status = "done"; 
+            console.log(tasks);
+        }
+    }
     displayTasks();
 }
 
 
-function late(){
-    const d = new Date();
-    let dl = new Date(tasks[i].Date);
-    delay = (dl - d )/(1000*60*60*24) ;
+// function late() {
+//     const d = new Date();
+//     let isOverdue = false; 
 
-    for (let i = 0; i < tasks.length; i++) {
-        let dl = new Date(tasks[i].Date);
+//     for (let i = 0; i < tasks.length; i++) {
+//         let dl = new Date(tasks[i].date); 
+//         let delay = (dl - d); 
 
-        if (delay >= 0) {
-            task[i].classList.add("mystyle");
-        }}
-}
+//         if (delay <= 0) {
+//             isOverdue = true;
+          
+//         }
+//     }
+
+//     const roww = document.getElementById("myStyle");
+//     if (isOverdue) {
+//         roww.classList.add("mystyle");
+//     } 
+// }
